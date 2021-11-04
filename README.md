@@ -1,9 +1,7 @@
 # Stripe PHP bindings
 
 [![Latest Stable Version](https://poser.pugx.org/starfolksoftware/flutterwave-php/v/stable.svg)](https://packagist.org/packages/starfolksoftware/flutterwave-php)
-[![Total Downloads](https://poser.pugx.org/starfolksoftware/flutterwave-php/downloads.svg)](https://packagist.org/packages/starfolksoftware/flutterwave-php)
 [![License](https://poser.pugx.org/starfolksoftware/flutterwave-php/license.svg)](https://packagist.org/packages/starfolksoftware/flutterwave-php)
-[![Code Coverage](https://coveralls.io/repos/starfolksoftware/flutterwave-php/badge.svg?branch=master)](https://coveralls.io/r/starfolksoftware/flutterwave-php?branch=master)
 
 The Flutterwave PHP library provides convenient access to the Flutterwave API from
 applications written in the PHP language. It includes a pre-defined set of
