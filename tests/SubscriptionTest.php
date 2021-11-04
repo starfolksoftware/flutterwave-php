@@ -13,11 +13,11 @@ final class SubscriptionTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $plan = $this->client()->subscription()->all(
+        $subscription = $this->client()->subscription()->all(
             new SubscriptionQueryParams([])
         );
 
-        $this->assertEquals('success', $plan['status']);
+        $this->assertEquals('success', $subscription['status']);
     }
 
     public function testSubscriptionCanBeCancelled(): void
@@ -26,9 +26,9 @@ final class SubscriptionTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $plan = $this->client()->subscription()->cancel(1);
+        $subscription = $this->client()->subscription()->cancel(1);
 
-        $this->assertEquals('success', $plan['status']);
+        $this->assertEquals('success', $subscription['status']);
     }
 
     public function testSubscriptionCanBeActivated(): void
@@ -37,8 +37,8 @@ final class SubscriptionTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $plan = $this->client()->subscription()->activate(1);
+        $subscription = $this->client()->subscription()->activate(1);
 
-        $this->assertEquals('success', $plan['status']);
+        $this->assertEquals('success', $subscription['status']);
     }
 }

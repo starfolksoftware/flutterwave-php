@@ -14,7 +14,7 @@ final class ChargeTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $plan = $this->client()->charge()->withToken(
+        $charge = $this->client()->charge()->withToken(
             new ChargeWithTokenOptions([
                 'token' => 'abc',
                 'email' => 'contact@starfolksoftware.com',
@@ -25,7 +25,7 @@ final class ChargeTest extends TestCase
             ])
         );
 
-        $this->assertEquals('success', $plan['status']);
+        $this->assertEquals('success', $charge['status']);
     }
 
     public function testCanUpdateCustomerToken(): void
@@ -34,7 +34,7 @@ final class ChargeTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $plan = $this->client()->charge()->updateCustomerToken(
+        $charge = $this->client()->charge()->updateCustomerToken(
             token: 124343,
             options: new UpdateCustomerTokenOptions([
                 'email' => 'contact@starfolksoftware.com',
@@ -44,6 +44,6 @@ final class ChargeTest extends TestCase
             ])
         );
 
-        $this->assertEquals('success', $plan['status']);
+        $this->assertEquals('success', $charge['status']);
     }
 }

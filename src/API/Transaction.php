@@ -35,7 +35,7 @@ final class Transaction extends ApiAbstract
     public function fee(TransactionFeeOptions $options): array
     {
         $response = $this->httpClient->get('/transactions/fee', [
-            'query' => $options
+            'query' => $options->all()
         ]);
 
         return ResponseMediator::getContent($response);
@@ -48,7 +48,7 @@ final class Transaction extends ApiAbstract
      * 
      * @return array
      */
-    public function resendWebhook(int $id, int $wait = 1): array
+    public function webhook(int $id, int $wait = 1): array
     {
         $response = $this->httpClient->post("/transactions/{$id}/resend-webhook", [
             'query' => [
