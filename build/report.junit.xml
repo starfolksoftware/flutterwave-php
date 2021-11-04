@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/Users/faruk/Documents/Development/flutterwave-php/tests" tests="11" assertions="11" errors="0" warnings="0" failures="0" skipped="0" time="0.088828">
+    <testsuite name="StarfolkSoftware\Flutterwave\Tests\TransactionTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/TransactionTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.077299">
+      <testcase name="testTransactionsCanBeRetrieved" class="StarfolkSoftware\Flutterwave\Tests\TransactionTest" classname="StarfolkSoftware.Flutterwave.Tests.TransactionTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/TransactionTest.php" line="10" assertions="1" time="0.077299"/>
+    </testsuite>
+    <testsuite name="StarfolkSoftware\Flutterwave\Tests\ChargeTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/ChargeTest.php" tests="2" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.003911">
+      <testcase name="testCanUpdateCustomerToken" class="StarfolkSoftware\Flutterwave\Tests\ChargeTest" classname="StarfolkSoftware.Flutterwave.Tests.ChargeTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/ChargeTest.php" line="31" assertions="1" time="0.002752"/>
+      <testcase name="testCanPerformTokenizedCharges" class="StarfolkSoftware\Flutterwave\Tests\ChargeTest" classname="StarfolkSoftware.Flutterwave.Tests.ChargeTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/ChargeTest.php" line="11" assertions="1" time="0.001158"/>
+    </testsuite>
+    <testsuite name="StarfolkSoftware\Flutterwave\Tests\SubscriptionTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/SubscriptionTest.php" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.002819">
+      <testcase name="testSubscriptionCanBeActivated" class="StarfolkSoftware\Flutterwave\Tests\SubscriptionTest" classname="StarfolkSoftware.Flutterwave.Tests.SubscriptionTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/SubscriptionTest.php" line="34" assertions="1" time="0.000934"/>
+      <testcase name="testSubscriptionsCanBeRetrieved" class="StarfolkSoftware\Flutterwave\Tests\SubscriptionTest" classname="StarfolkSoftware.Flutterwave.Tests.SubscriptionTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/SubscriptionTest.php" line="10" assertions="1" time="0.001387"/>
+      <testcase name="testSubscriptionCanBeCancelled" class="StarfolkSoftware\Flutterwave\Tests\SubscriptionTest" classname="StarfolkSoftware.Flutterwave.Tests.SubscriptionTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/SubscriptionTest.php" line="23" assertions="1" time="0.000499"/>
+    </testsuite>
+    <testsuite name="StarfolkSoftware\Flutterwave\Tests\PlanTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/PlanTest.php" tests="5" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.004799">
+      <testcase name="testPlanCanBeFound" class="StarfolkSoftware\Flutterwave\Tests\PlanTest" classname="StarfolkSoftware.Flutterwave.Tests.PlanTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/PlanTest.php" line="37" assertions="1" time="0.001328"/>
+      <testcase name="testPlanCanBeCreated" class="StarfolkSoftware\Flutterwave\Tests\PlanTest" classname="StarfolkSoftware.Flutterwave.Tests.PlanTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/PlanTest.php" line="11" assertions="1" time="0.001283"/>
+      <testcase name="testPlanCanBeCancelled" class="StarfolkSoftware\Flutterwave\Tests\PlanTest" classname="StarfolkSoftware.Flutterwave.Tests.PlanTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/PlanTest.php" line="62" assertions="1" time="0.000517"/>
+      <testcase name="testPlanCanBeUpdated" class="StarfolkSoftware\Flutterwave\Tests\PlanTest" classname="StarfolkSoftware.Flutterwave.Tests.PlanTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/PlanTest.php" line="48" assertions="1" time="0.001175"/>
+      <testcase name="testPlansCanBeRetrieved" class="StarfolkSoftware\Flutterwave\Tests\PlanTest" classname="StarfolkSoftware.Flutterwave.Tests.PlanTest" file="/Users/faruk/Documents/Development/flutterwave-php/tests/PlanTest.php" line="26" assertions="1" time="0.000495"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
