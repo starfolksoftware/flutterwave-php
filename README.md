@@ -29,7 +29,7 @@ require_once('vendor/autoload.php');
 
 ## Dependencies
 
-Any package that implements [psr/http-client-implementation package](https://packagist.org/providers/psr/http-client-implementation)
+Any package that implements [psr/http-client-implementation](https://packagist.org/providers/psr/http-client-implementation)
 
 ## Getting Started
 
@@ -44,13 +44,17 @@ $flutterwave = new FlutterwaveClient(new Options([
     'secretKey' => 'secret',
 ]));
 
-$customer = $flutterwave->plans->create(new CreatePlanOptions([
-    'name' => 'Test Plan',
-    'amount' => 100,
-    'interval' => 'monthly'
-]));
+$response = $flutterwave
+    ->plans()
+    ->create(
+        new CreatePlanOptions([
+            'name' => 'Test Plan',
+            'amount' => 100,
+            'interval' => 'monthly'
+        ])
+    );
 
-echo $customer;
+echo $response;
 ```
 
 ## Documentation
