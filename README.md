@@ -1,4 +1,4 @@
-# Stripe PHP bindings
+# Flutterwave PHP bindings
 
 [![Latest Stable Version](https://poser.pugx.org/starfolksoftware/flutterwave-php/v/stable.svg)](https://packagist.org/packages/starfolksoftware/flutterwave-php)
 [![License](https://poser.pugx.org/starfolksoftware/flutterwave-php/license.svg)](https://packagist.org/packages/starfolksoftware/flutterwave-php)
