@@ -69,7 +69,7 @@ final class Client
      * 
      * @return Plan
      */
-    public function plans(): Plan
+    protected function plans(): Plan
     {
         return new Plan($this);
     }
@@ -79,7 +79,7 @@ final class Client
      * 
      * @return Subscription
      */
-    public function subscriptions(): Subscription
+    protected function subscriptions(): Subscription
     {
         return new Subscription($this);
     }
@@ -89,7 +89,7 @@ final class Client
      * 
      * @return Charge
      */
-    public function charges(): Charge
+    protected function charges(): Charge
     {
         return new Charge($this);
     }
@@ -99,8 +99,22 @@ final class Client
      * 
      * @return Transaction
      */
-    public function transactions(): Transaction
+    protected function transactions(): Transaction
     {
         return new Transaction($this);
+    }
+
+    /**
+     * Read data from inaccessible (protected or private) 
+     * or non-existing properties.
+     * 
+     * @param string $name
+     * @return mixed
+     */
+    public function __get(string $name)
+    {
+        if (method_exists($this, $name)) {
+            return $this->{$name}();
+        }
     }
 }
