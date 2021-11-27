@@ -45,7 +45,7 @@ $flutterwave = new FlutterwaveClient(new Options([
 ]));
 
 $response = $flutterwave
-    ->plans()
+    ->plan()
     ->create(
         new CreatePlanOptions([
             'name' => 'Test Plan',

@@ -12,14 +12,16 @@ final class Transaction extends ApiAbstract
     /**
      * Get all transactions
      * 
-     * @param TransactionQueryParams $params
+     * @param array $params
      * 
      * @return array
      */
-    public function all(TransactionQueryParams $params): array
+    public function all(array $params): array
     {
+        $options = new TransactionQueryParams($params);
+
         $response = $this->httpClient->get('/transactions', [
-            'query' => $params->all(),
+            'query' => $options->all(),
         ]);
 
         return ResponseMediator::getContent($response);
@@ -28,12 +30,14 @@ final class Transaction extends ApiAbstract
     /**
      * Get fee of a transaction about to happen.
      * 
-     * @param TransactionFeeOptions $options
+     * @param array $params
      * 
      * @return array
      */
-    public function fee(TransactionFeeOptions $options): array
+    public function fee(array $params): array
     {
+        $options = new TransactionFeeOptions($params);
+
         $response = $this->httpClient->get('/transactions/fee', [
             'query' => $options->all()
         ]);

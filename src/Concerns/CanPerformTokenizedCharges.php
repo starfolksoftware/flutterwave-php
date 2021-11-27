@@ -11,12 +11,14 @@ trait CanPerformTokenizedCharges
     /**
      * Charge with token
      * 
-     * @param ChargeWithTokenOptions $options
+     * @param array $params
      * 
      * @return array
      */
-    public function withToken(ChargeWithTokenOptions $options): array
+    public function withToken(array $params): array
     {
+        $options = new ChargeWithTokenOptions($params);
+
         $response = $this->httpClient->post('/tokenized-charges', [
             'json' => $options->all(),
         ]);
@@ -28,12 +30,14 @@ trait CanPerformTokenizedCharges
      * Update token details
      * 
      * @param string $token
-     * @param UpdateCustomerTokenOptions $options
+     * @param array $params
      * 
      * @return array
      */
-    public function updateCustomerToken(string $token, UpdateCustomerTokenOptions $options): array
+    public function updateCustomerToken(string $token, array $params): array
     {
+        $options = new UpdateCustomerTokenOptions($params);
+
         $response = $this->httpClient->put("/tokens/{$token}", [
             'json' => $options->all(),
         ]);

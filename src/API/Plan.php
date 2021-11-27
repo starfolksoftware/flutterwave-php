@@ -25,12 +25,14 @@ final class Plan extends ApiAbstract
     /**
      * Creates a new plan
      * 
-     * @param CreatePlanOptions $options
+     * @param array $params
      * 
      * @return array
      */
-    public function create(CreatePlanOptions $options): array
+    public function create(array $params): array
     {
+        $options = new CreatePlanOptions($params);
+
         $response = $this->httpClient->post('/payment-plans', [
             'json' => $options->all(),
         ]);
@@ -68,12 +70,14 @@ final class Plan extends ApiAbstract
      * Updates a plan
      * 
      * @param int $id
-     * @param UpdatePlanOptions $options
+     * @param array $params
      * 
      * @return array
      */
-    public function update(int $id, UpdatePlanOptions $options): array
+    public function update(int $id, array $params): array
     {
+        $options = new UpdatePlanOptions($params);
+
         $response = $this->httpClient->put("/payment-plans/{$id}", [
             'json' => $options->all(),
         ]);

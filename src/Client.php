@@ -25,13 +25,13 @@ final class Client
     /**
      * Intantiate the client class
      * 
-     * @param Options $options
+     * @param array $opts
      * 
      * @return void
      */
-    public function __construct(Options $options = null)
+    public function __construct(array $opts = [])
     {
-        $options = $options ?? new Options();
+        $options = new Options($opts);
 
         $this->apiVersion = $options->getApiVersion();
 

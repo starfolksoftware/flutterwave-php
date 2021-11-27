@@ -11,14 +11,16 @@ final class Subscription extends ApiAbstract
     /**
      * Retrieves all plans
      * 
-     * @param SubscriptionQueryParams $queryParams
+     * @param array $params
      * 
      * @return array
      */
-    public function all(SubscriptionQueryParams $queryParams): array
+    public function all(array $params): array
     {
+        $options = new SubscriptionQueryParams($params);
+
         $response = $this->httpClient->get('/subscriptions', [
-            'query' => $queryParams->all()
+            'query' => $options->all()
         ]);
 
         return ResponseMediator::getContent($response);
