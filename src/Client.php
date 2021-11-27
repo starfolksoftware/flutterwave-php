@@ -69,7 +69,7 @@ final class Client
      * 
      * @return Plan
      */
-    public function plan(): Plan
+    public function plans(): Plan
     {
         return new Plan($this);
     }
@@ -79,7 +79,7 @@ final class Client
      * 
      * @return Subscription
      */
-    public function subscription(): Subscription
+    public function subscriptions(): Subscription
     {
         return new Subscription($this);
     }
@@ -89,7 +89,7 @@ final class Client
      * 
      * @return Charge
      */
-    public function charge(): Charge
+    public function charges(): Charge
     {
         return new Charge($this);
     }
@@ -99,7 +99,7 @@ final class Client
      * 
      * @return Transaction
      */
-    public function transaction(): Transaction
+    public function transactions(): Transaction
     {
         return new Transaction($this);
     }

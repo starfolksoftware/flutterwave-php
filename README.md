@@ -37,22 +37,17 @@ Simple usage looks like:
 
 ```php
 use StarfolkSoftware\Flutterwave\Client as FlutterwaveClient;
-use StarfolkSoftware\Flutterwave\Options\CreatePlanOptions;
-use StarfolkSoftware\Flutterwave\Options;
 
-$flutterwave = new FlutterwaveClient(new Options([
+$flutterwave = new FlutterwaveClient([
     'secretKey' => 'secret',
-]));
+]);
 
-$response = $flutterwave
-    ->plan()
-    ->create(
-        new CreatePlanOptions([
+$response = $flutterwave->plans()
+        ->create([
             'name' => 'Test Plan',
             'amount' => 100,
             'interval' => 'monthly'
-        ])
-    );
+        ]);
 
 echo $response;
 ```
