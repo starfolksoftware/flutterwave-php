@@ -5,7 +5,6 @@ namespace StarfolkSoftware\Flutterwave\Tests;
 use Http\Mock\Client;
 use StarfolkSoftware\Flutterwave\Client as FlutterwaveClient;
 use StarfolkSoftware\Flutterwave\ClientBuilder;
-use StarfolkSoftware\Flutterwave\Options;
 
 abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
@@ -20,9 +19,9 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
 
     protected function client(): FlutterwaveClient
     {
-        return new FlutterwaveClient(new Options([
+        return new FlutterwaveClient([
             'clientBuilder' => new ClientBuilder($this->mockClient),
             'secretKey' => 'secret',
-        ]));
+        ]);
     }
 }

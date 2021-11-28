@@ -3,8 +3,6 @@
 namespace StarfolkSoftware\Flutterwave\Tests;
 
 use Laminas\Diactoros\Response\JsonResponse;
-use StarfolkSoftware\Flutterwave\Options\TransactionFeeOptions;
-use StarfolkSoftware\Flutterwave\Options\TransactionQueryParams;
 
 final class TransactionTest extends TestCase
 {
@@ -14,9 +12,7 @@ final class TransactionTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $transaction = $this->client()->transaction()->all(
-            params: new TransactionQueryParams([])
-        );
+        $transaction = $this->client()->transactions->all([]);
 
         $this->assertEquals('success', $transaction['status']);
     }
@@ -27,12 +23,10 @@ final class TransactionTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $transaction = $this->client()->transaction()->fee(
-            options: new TransactionFeeOptions([
-                'amount' => 10000,
-                'currency' => 'NGN',
-            ])
-        );
+        $transaction = $this->client()->transactions->fee([
+            'amount' => 10000,
+            'currency' => 'NGN',
+        ]);
 
         $this->assertEquals('success', $transaction['status']);
     }
@@ -43,7 +37,7 @@ final class TransactionTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $transaction = $this->client()->transaction()->webhook(
+        $transaction = $this->client()->transactions->webhook(
             id: 12345
         );
 
@@ -56,7 +50,7 @@ final class TransactionTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $transaction = $this->client()->transaction()->verify(
+        $transaction = $this->client()->transactions->verify(
             id: 12345
         );
 
@@ -69,7 +63,7 @@ final class TransactionTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $transaction = $this->client()->transaction()->timeline(
+        $transaction = $this->client()->transactions->timeline(
             id: 12345
         );
 

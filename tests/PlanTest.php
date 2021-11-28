@@ -3,8 +3,6 @@
 namespace StarfolkSoftware\Flutterwave\Tests;
 
 use Laminas\Diactoros\Response\JsonResponse;
-use StarfolkSoftware\Flutterwave\Options\CreatePlanOptions;
-use StarfolkSoftware\Flutterwave\Options\UpdatePlanOptions;
 
 final class PlanTest extends TestCase
 {
@@ -14,11 +12,11 @@ final class PlanTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $plan = $this->client()->plan()->create(new CreatePlanOptions([
+        $plan = $this->client()->plans->create([
             'name' => 'Test Plan',
             'amount' => 100,
             'interval' => 'monthly'
-        ]));
+        ]);
 
         $this->assertEquals('success', $plan['status']);
     }
@@ -29,7 +27,7 @@ final class PlanTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $plan = $this->client()->plan()->all();
+        $plan = $this->client()->plans->all();
 
         $this->assertEquals('success', $plan['status']);
     }
@@ -40,7 +38,7 @@ final class PlanTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $plan = $this->client()->plan()->find(1);
+        $plan = $this->client()->plans->find(1);
 
         $this->assertEquals('success', $plan['status']);
     }
@@ -51,10 +49,10 @@ final class PlanTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $plan = $this->client()->plan()->update(1, new UpdatePlanOptions([
+        $plan = $this->client()->plans->update(1, [
             'name' => 'plan 1',
             'status' => 'cancelled',
-        ]));
+        ]);
 
         $this->assertEquals('success', $plan['status']);
     }
@@ -65,7 +63,7 @@ final class PlanTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $plan = $this->client()->plan()->cancel(1);
+        $plan = $this->client()->plans->cancel(1);
 
         $this->assertEquals('success', $plan['status']);
     }

@@ -3,7 +3,6 @@
 namespace StarfolkSoftware\Flutterwave\Tests;
 
 use Laminas\Diactoros\Response\JsonResponse;
-use StarfolkSoftware\Flutterwave\Options\SubscriptionQueryParams;
 
 final class SubscriptionTest extends TestCase
 {
@@ -13,9 +12,7 @@ final class SubscriptionTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $subscription = $this->client()->subscription()->all(
-            new SubscriptionQueryParams([])
-        );
+        $subscription = $this->client()->subscriptions->all([]);
 
         $this->assertEquals('success', $subscription['status']);
     }
@@ -26,7 +23,7 @@ final class SubscriptionTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $subscription = $this->client()->subscription()->cancel(1);
+        $subscription = $this->client()->subscriptions->cancel(1);
 
         $this->assertEquals('success', $subscription['status']);
     }
@@ -37,7 +34,7 @@ final class SubscriptionTest extends TestCase
             "status" => "success",
         ]))->withStatus(200));
 
-        $subscription = $this->client()->subscription()->activate(1);
+        $subscription = $this->client()->subscriptions->activate(1);
 
         $this->assertEquals('success', $subscription['status']);
     }
