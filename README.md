@@ -43,7 +43,7 @@ require_once "vendor/autoload.php";
 use StarfolkSoftware\Flutterwave\Client as FlutterwaveClient;
 
 $flutterwave = new FlutterwaveClient([
-    'secretKey' => 'FLWSECK_TEST-8bfa3677596bd0967882c4a4c9603790-X',
+    'secretKey' => 'FLWSECK_TEST-*******',
 ]);
 
 $response = $flutterwave
