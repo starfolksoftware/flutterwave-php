@@ -2,11 +2,13 @@
 
 namespace StarfolkSoftware\Flutterwave;
 
+use Http\Mock\Client as MockClient;
 use Http\Client\Common\HttpMethodsClientInterface;
 use Http\Client\Common\Plugin\BaseUriPlugin;
 use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 use StarfolkSoftware\Flutterwave\API\Charge;
 use StarfolkSoftware\Flutterwave\API\Plan;
+use StarfolkSoftware\Flutterwave\API\Refund;
 use StarfolkSoftware\Flutterwave\API\Subscription;
 use StarfolkSoftware\Flutterwave\API\Transaction;
 
@@ -105,6 +107,16 @@ final class Client
     }
 
     /**
+     * Refund API
+     * 
+     * @return Refund
+     */
+    protected function refunds(): Refund
+    {
+        return new Refund($this);
+    }
+
+    /**
      * Read data from inaccessible (protected or private) 
      * or non-existing properties.
      * 
@@ -116,5 +128,19 @@ final class Client
         if (method_exists($this, $name)) {
             return $this->{$name}();
         }
+    }
+
+    /**
+     * Mock client
+     * 
+     * @param MockClient $client
+     * @return static
+     */
+    public static function fake(MockClient $client)
+    {
+        return new Client([
+            'clientBuilder' => new ClientBuilder($client),
+            'secretKey' => 'fake'
+        ]);
     }
 }

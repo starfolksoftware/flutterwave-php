@@ -24,6 +24,7 @@
     },
     "require": {
         "php": "^8.0",
+        "laminas/laminas-diactoros": "^2.8",
         "php-http/client-common": "^2.3",
         "php-http/discovery": "^1.14.1",
         "psr/http-client": "^1.0.1",
@@ -32,7 +33,6 @@
         "symfony/options-resolver": "^5.2"
     },
     "require-dev": {
-        "laminas/laminas-diactoros": "^2.4",
         "php-http/curl-client": "^2.1",
         "php-http/mock-client": "^1.5",
         "phpunit/phpunit": "^9.5",
