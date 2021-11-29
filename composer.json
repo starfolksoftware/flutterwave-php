@@ -38,6 +38,9 @@
         "phpunit/phpunit": "^9.5",
         "symfony/var-dumper": "^5.1"
     },
+    "scripts": {
+        "test": "phpunit"
+    },
     "minimum-stability": "stable",
     "support": {
         "email": "contact@starfolksoftware.com",
