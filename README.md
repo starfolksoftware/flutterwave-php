@@ -65,7 +65,7 @@ array(21) { ... }
 - [ ] Preauthorization
 - [x] Transactions
 - [ ] Transfers
-- [ ] Beneficiaries
+- [x] Beneficiaries
 - [ ] Virtual cards
 - [ ] Virtual account number
 - [x] Payment Plans
