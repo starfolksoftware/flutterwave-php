@@ -15,6 +15,7 @@ use StarfolkSoftware\Flutterwave\API\Refund;
 use StarfolkSoftware\Flutterwave\API\Subaccount;
 use StarfolkSoftware\Flutterwave\API\Subscription;
 use StarfolkSoftware\Flutterwave\API\Transaction;
+use StarfolkSoftware\Flutterwave\API\VirtualCard;
 
 /**
  * PHP Flutterwave client.
@@ -118,6 +119,16 @@ final class Client
     protected function beneficiaries(): Beneficiary
     {
         return new Beneficiary($this);
+    }
+
+    /**
+     * Virtual Cards API
+     * 
+     * @return VirtualCard
+     */
+    protected function virtualCards(): VirtualCard
+    {
+        return new VirtualCard($this);
     }
 
     /**
