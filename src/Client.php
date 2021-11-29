@@ -11,6 +11,7 @@ use StarfolkSoftware\Flutterwave\API\Charge;
 use StarfolkSoftware\Flutterwave\API\Plan;
 use StarfolkSoftware\Flutterwave\API\Preauthorization;
 use StarfolkSoftware\Flutterwave\API\Refund;
+use StarfolkSoftware\Flutterwave\API\Subaccount;
 use StarfolkSoftware\Flutterwave\API\Subscription;
 use StarfolkSoftware\Flutterwave\API\Transaction;
 
@@ -69,26 +70,6 @@ final class Client
     }
 
     /**
-     * Plan API
-     * 
-     * @return Plan
-     */
-    protected function plans(): Plan
-    {
-        return new Plan($this);
-    }
-
-    /**
-     * Subscription API
-     * 
-     * @return Subscription
-     */
-    protected function subscriptions(): Subscription
-    {
-        return new Subscription($this);
-    }
-
-    /**
      * Charge API
      * 
      * @return Charge
@@ -119,6 +100,16 @@ final class Client
     }
 
     /**
+     * Refund API
+     * 
+     * @return Refund
+     */
+    protected function refunds(): Refund
+    {
+        return new Refund($this);
+    }
+
+    /**
      * Beneficiary API
      * 
      * @return Beneficiary
@@ -129,13 +120,33 @@ final class Client
     }
 
     /**
-     * Refund API
+     * Plan API
      * 
-     * @return Refund
+     * @return Plan
      */
-    protected function refunds(): Refund
+    protected function plans(): Plan
     {
-        return new Refund($this);
+        return new Plan($this);
+    }
+
+    /**
+     * Subscription API
+     * 
+     * @return Subscription
+     */
+    protected function subscriptions(): Subscription
+    {
+        return new Subscription($this);
+    }
+
+    /**
+     * Subaccount API
+     * 
+     * @return Subaccount
+     */
+    protected function subaccounts(): Subaccount
+    {
+        return new Subaccount($this);
     }
 
     /**

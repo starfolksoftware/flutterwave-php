@@ -4,23 +4,22 @@ namespace StarfolkSoftware\Flutterwave\API;
 
 use StarfolkSoftware\Flutterwave\Abstracts\ApiAbstract;
 use StarfolkSoftware\Flutterwave\HttpClient\Message\ResponseMediator;
-use StarfolkSoftware\Flutterwave\Options\CreatePlanOptions;
-use StarfolkSoftware\Flutterwave\Options\UpdatePlanOptions;
+use StarfolkSoftware\Flutterwave\Options\CreateSubaccountOptions;
+use StarfolkSoftware\Flutterwave\Options\UpdateSubaccountOptions;
 
-final class Plan extends ApiAbstract
+final class Subaccount extends ApiAbstract
 {
     /**
-     * Creates a new plan
+     * Create a subaccount
      * 
      * @param array $params
-     * 
      * @return array
      */
     public function create(array $params): array
     {
-        $options = new CreatePlanOptions($params);
+        $options = new CreateSubaccountOptions($params);
 
-        $response = $this->httpClient->post('/payment-plans', [
+        $response = $this->httpClient->post('subaccounts', [
             'json' => json_encode($options->all()),
         ]);
 
@@ -28,44 +27,45 @@ final class Plan extends ApiAbstract
     }
 
     /**
-     * Retrieves all plans
+     * Fetch all subaccounts
      * 
+     * @param array $params
      * @return array
      */
-    public function all(): array
+    public function all(array $params = []): array
     {
-        $response = $this->httpClient->get('/payment-plans');
+        $response = $this->httpClient->get('subaccounts', [
+            'query' => json_encode($params),
+        ]);
 
         return ResponseMediator::getContent($response);
     }
 
     /**
-     * Retrieves a plan
+     * Find a subaccount
      * 
      * @param int $id
-     * 
      * @return array
      */
     public function find(int $id): array
     {
-        $response = $this->httpClient->get("/payment-plans/{$id}");
+        $response = $this->httpClient->get("subaccounts/{$id}");
 
         return ResponseMediator::getContent($response);
     }
 
     /**
-     * Updates a plan
+     * Udapte a subaccount
      * 
      * @param int $id
      * @param array $params
-     * 
      * @return array
      */
     public function update(int $id, array $params): array
     {
-        $options = new UpdatePlanOptions($params);
+        $options = new UpdateSubaccountOptions($params);
 
-        $response = $this->httpClient->put("/payment-plans/{$id}", [
+        $response = $this->httpClient->put("subaccounts/{$id}", [
             'json' => json_encode($options->all()),
         ]);
 
@@ -73,15 +73,14 @@ final class Plan extends ApiAbstract
     }
 
     /**
-     * Cancel a plan
+     * Delete a subaccount
      * 
      * @param int $id
-     * 
      * @return array
      */
-    public function cancel(int $id): array
+    public function delete(int $id): array
     {
-        $response = $this->httpClient->post("/payment-plans/{$id}/cancel");
+        $response = $this->httpClient->delete("subaccounts/{$id}");
 
         return ResponseMediator::getContent($response);
     }
