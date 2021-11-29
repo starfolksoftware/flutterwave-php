@@ -22,7 +22,7 @@ trait CanPerformTokenizedCharges
         $options = new ChargeWithTokenOptions($params);
 
         $response = $this->httpClient->post('/tokenized-charges', [
-            'json' => $options->all(),
+            'json' => json_encode($options->all()),
         ]);
 
         return ResponseMediator::getContent($response);
@@ -41,7 +41,7 @@ trait CanPerformTokenizedCharges
         $options = new UpdateCustomerTokenOptions($params);
 
         $response = $this->httpClient->put("/tokens/{$token}", [
-            'json' => $options->all(),
+            'json' => json_encode($options->all()),
         ]);
 
         return ResponseMediator::getContent($response);
@@ -51,7 +51,6 @@ trait CanPerformTokenizedCharges
      * Charge with token in bulk
      * 
      * @param array $params
-     * 
      * @return array
      */
     public function withTokenInBulk(array $params): array

@@ -20,7 +20,7 @@ final class Beneficiary extends ApiAbstract
         $options = new CreateBeneficiaryOptions($params);
 
         $response = $this->httpClient->post('/beneficiaries', [
-            'json' => $options->all(),
+            'json' => json_encode($options->all()),
         ]);
 
         return ResponseMediator::getContent($response);

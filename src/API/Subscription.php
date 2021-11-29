@@ -20,7 +20,7 @@ final class Subscription extends ApiAbstract
         $options = new SubscriptionQueryParams($params);
 
         $response = $this->httpClient->get('/subscriptions', [
-            'query' => $options->all()
+            'query' => json_encode($options->all())
         ]);
 
         return ResponseMediator::getContent($response);

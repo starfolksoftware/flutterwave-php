@@ -21,7 +21,7 @@ final class Transaction extends ApiAbstract
         $options = new TransactionQueryParams($params);
 
         $response = $this->httpClient->get('/transactions', [
-            'query' => $options->all(),
+            'query' => json_encode($options->all()),
         ]);
 
         return ResponseMediator::getContent($response);
@@ -39,7 +39,7 @@ final class Transaction extends ApiAbstract
         $options = new TransactionFeeOptions($params);
 
         $response = $this->httpClient->get('/transactions/fee', [
-            'query' => $options->all()
+            'query' => json_encode($options->all())
         ]);
 
         return ResponseMediator::getContent($response);
