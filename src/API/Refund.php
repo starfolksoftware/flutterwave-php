@@ -51,7 +51,7 @@ final class Refund extends ApiAbstract
         $options = new RefundQueryParams($params);
 
         $response = $this->httpClient->get('/refunds', [
-            'query' => $options->all()
+            'query' => json_encode($options->all())
         ]);
 
         return ResponseMediator::getContent($response);

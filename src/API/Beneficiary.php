@@ -35,9 +35,9 @@ final class Beneficiary extends ApiAbstract
     public function all(int $page = 1): array
     {
         $response = $this->httpClient->get('/beneficiaries', [
-            'query' => [
+            'query' => json_encode([
                 'page' => $page,
-            ],
+            ]),
         ]);
 
         return ResponseMediator::getContent($response);
