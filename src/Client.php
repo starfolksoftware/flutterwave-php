@@ -6,6 +6,7 @@ use Http\Mock\Client as MockClient;
 use Http\Client\Common\HttpMethodsClientInterface;
 use Http\Client\Common\Plugin\BaseUriPlugin;
 use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
+use StarfolkSoftware\Flutterwave\API\Beneficiary;
 use StarfolkSoftware\Flutterwave\API\Charge;
 use StarfolkSoftware\Flutterwave\API\Plan;
 use StarfolkSoftware\Flutterwave\API\Refund;
@@ -104,6 +105,16 @@ final class Client
     protected function transactions(): Transaction
     {
         return new Transaction($this);
+    }
+
+    /**
+     * Beneficiary API
+     * 
+     * @return Beneficiary
+     */
+    protected function beneficiaries(): Beneficiary
+    {
+        return new Beneficiary($this);
     }
 
     /**

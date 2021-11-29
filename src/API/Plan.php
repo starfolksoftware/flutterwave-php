@@ -11,18 +11,6 @@ use StarfolkSoftware\Flutterwave\Options\UpdatePlanOptions;
 final class Plan extends ApiAbstract
 {
     /**
-     * Subscription constructor.
-     * 
-     * @param Client $client
-     * 
-     * @return void
-     */
-    public function __construct(Client $client)
-    {
-        parent::__construct($client);
-    }
-
-    /**
      * Creates a new plan
      * 
      * @param array $params
