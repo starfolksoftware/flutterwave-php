@@ -70,8 +70,8 @@ array(21) { ... }
 - [ ] Virtual account number
 - [x] Payment Plans
 - [x] Subscriptions
-- [ ] Collection subaccounts
-- [ ] Payout subaccounts
+- [x] Collection subaccounts
+- [x] Payout subaccounts
 - [ ] Bills
 - [ ] Remita payments
 - [ ] Banks

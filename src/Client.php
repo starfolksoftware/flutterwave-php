@@ -8,6 +8,7 @@ use Http\Client\Common\Plugin\BaseUriPlugin;
 use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 use StarfolkSoftware\Flutterwave\API\Beneficiary;
 use StarfolkSoftware\Flutterwave\API\Charge;
+use StarfolkSoftware\Flutterwave\API\PayoutSubaccount;
 use StarfolkSoftware\Flutterwave\API\Plan;
 use StarfolkSoftware\Flutterwave\API\Preauthorization;
 use StarfolkSoftware\Flutterwave\API\Refund;
@@ -147,6 +148,16 @@ final class Client
     protected function subaccounts(): Subaccount
     {
         return new Subaccount($this);
+    }
+
+    /**
+     * Payout Subaccount API
+     * 
+     * @return PayoutSubaccount
+     */
+    protected function payoutSubaccounts(): PayoutSubaccount
+    {
+        return new PayoutSubaccount($this);
     }
 
     /**
