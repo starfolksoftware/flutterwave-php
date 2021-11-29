@@ -22,7 +22,7 @@ final class Plan extends ApiAbstract
         $options = new CreatePlanOptions($params);
 
         $response = $this->httpClient->post('/payment-plans', [
-            'json' => $options->all(),
+            'json' => json_encode($options->all()),
         ]);
 
         return ResponseMediator::getContent($response);
@@ -67,7 +67,7 @@ final class Plan extends ApiAbstract
         $options = new UpdatePlanOptions($params);
 
         $response = $this->httpClient->put("/payment-plans/{$id}", [
-            'json' => $options->all(),
+            'json' => json_encode($options->all()),
         ]);
 
         return ResponseMediator::getContent($response);

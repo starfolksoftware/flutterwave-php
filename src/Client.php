@@ -9,6 +9,7 @@ use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 use StarfolkSoftware\Flutterwave\API\Beneficiary;
 use StarfolkSoftware\Flutterwave\API\Charge;
 use StarfolkSoftware\Flutterwave\API\Plan;
+use StarfolkSoftware\Flutterwave\API\Preauthorization;
 use StarfolkSoftware\Flutterwave\API\Refund;
 use StarfolkSoftware\Flutterwave\API\Subscription;
 use StarfolkSoftware\Flutterwave\API\Transaction;
@@ -95,6 +96,16 @@ final class Client
     protected function charges(): Charge
     {
         return new Charge($this);
+    }
+
+    /**
+     * Preauthorization API
+     * 
+     * @return Preauthorization
+     */
+    protected function preauthorizations(): Preauthorization
+    {
+        return new Preauthorization($this);
     }
 
     /**

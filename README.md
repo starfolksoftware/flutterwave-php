@@ -62,7 +62,7 @@ array(21) { ... }
 - [ ] Charge
 - [ ] Validate a charge
 - [x] Tokenized Charges
-- [ ] Preauthorization
+- [x] Preauthorization
 - [x] Transactions
 - [ ] Transfers
 - [x] Beneficiaries
