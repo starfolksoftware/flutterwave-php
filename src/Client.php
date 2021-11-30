@@ -13,6 +13,7 @@ use StarfolkSoftware\Flutterwave\API\PayoutSubaccount;
 use StarfolkSoftware\Flutterwave\API\Plan;
 use StarfolkSoftware\Flutterwave\API\Preauthorization;
 use StarfolkSoftware\Flutterwave\API\Refund;
+use StarfolkSoftware\Flutterwave\API\Settlement;
 use StarfolkSoftware\Flutterwave\API\Subaccount;
 use StarfolkSoftware\Flutterwave\API\Subscription;
 use StarfolkSoftware\Flutterwave\API\Transaction;
@@ -192,6 +193,16 @@ final class Client
     protected function banks(): Bank
     {
         return new Bank($this);
+    }
+
+    /**
+     * Settlement API
+     * 
+     * @return Settlement
+     */
+    protected function settlements(): Settlement
+    {
+        return new Settlement($this);
     }
 
     /**
