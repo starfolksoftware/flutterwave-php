@@ -78,7 +78,7 @@ array(21) { ... }
 - [ ] Misc
 - [x] Settlements
 - [x] OTPS
-- [ ] Chargebacks
+- [x] Chargebacks
 
 ## Documentation
 
