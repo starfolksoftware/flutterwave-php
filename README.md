@@ -64,7 +64,7 @@ array(21) { ... }
 - [x] Tokenized Charges
 - [x] Preauthorization
 - [x] Transactions
-- [ ] Transfers
+- [x] Transfers
 - [x] Beneficiaries
 - [x] Virtual cards
 - [x] Virtual account number
