@@ -9,6 +9,8 @@ use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 use StarfolkSoftware\Flutterwave\API\Bank;
 use StarfolkSoftware\Flutterwave\API\Beneficiary;
 use StarfolkSoftware\Flutterwave\API\Charge;
+use StarfolkSoftware\Flutterwave\API\Chargeback;
+use StarfolkSoftware\Flutterwave\API\Otp;
 use StarfolkSoftware\Flutterwave\API\PayoutSubaccount;
 use StarfolkSoftware\Flutterwave\API\Plan;
 use StarfolkSoftware\Flutterwave\API\Preauthorization;
@@ -203,6 +205,26 @@ final class Client
     protected function settlements(): Settlement
     {
         return new Settlement($this);
+    }
+
+    /**
+     * Otp API
+     * 
+     * @return Otp
+     */
+    protected function otps(): Otp
+    {
+        return new Otp($this);
+    }
+
+    /**
+     * Chargeback API
+     * 
+     * @return Chargeback
+     */
+    protected function chargebacks(): Chargeback
+    {
+        return new Chargeback($this);
     }
 
     /**
