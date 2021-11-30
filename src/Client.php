@@ -15,6 +15,7 @@ use StarfolkSoftware\Flutterwave\API\Refund;
 use StarfolkSoftware\Flutterwave\API\Subaccount;
 use StarfolkSoftware\Flutterwave\API\Subscription;
 use StarfolkSoftware\Flutterwave\API\Transaction;
+use StarfolkSoftware\Flutterwave\API\Transfer;
 use StarfolkSoftware\Flutterwave\API\VirtualAccountNumber;
 use StarfolkSoftware\Flutterwave\API\VirtualCard;
 
@@ -170,6 +171,16 @@ final class Client
     protected function subaccounts(): Subaccount
     {
         return new Subaccount($this);
+    }
+
+    /**
+     * Transfer API
+     * 
+     * @return Transfer
+     */
+    protected function transfers(): Transfer
+    {
+        return new Transfer($this);
     }
 
     /**
