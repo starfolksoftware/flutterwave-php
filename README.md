@@ -74,7 +74,7 @@ array(21) { ... }
 - [x] Payout subaccounts
 - [ ] Bills
 - [ ] Remita payments
-- [ ] Banks
+- [x] Banks
 - [ ] Misc
 - [ ] Settlements
 - [ ] OTPS

@@ -6,6 +6,7 @@ use Http\Mock\Client as MockClient;
 use Http\Client\Common\HttpMethodsClientInterface;
 use Http\Client\Common\Plugin\BaseUriPlugin;
 use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
+use StarfolkSoftware\Flutterwave\API\Bank;
 use StarfolkSoftware\Flutterwave\API\Beneficiary;
 use StarfolkSoftware\Flutterwave\API\Charge;
 use StarfolkSoftware\Flutterwave\API\PayoutSubaccount;
@@ -181,6 +182,16 @@ final class Client
     protected function transfers(): Transfer
     {
         return new Transfer($this);
+    }
+
+    /**
+     * Bank API
+     * 
+     * @return Bank
+     */
+    protected function banks(): Bank
+    {
+        return new Bank($this);
     }
 
     /**
