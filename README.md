@@ -59,8 +59,8 @@ array(21) { ... }
 
 ## Roadmap
 
-- [ ] Charge
-- [ ] Validate a charge
+- [x] Charge
+- [x] Validate a charge
 - [x] Tokenized Charges
 - [x] Preauthorization
 - [x] Transactions
