@@ -66,8 +66,8 @@ array(21) { ... }
 - [x] Transactions
 - [ ] Transfers
 - [x] Beneficiaries
-- [ ] Virtual cards
-- [ ] Virtual account number
+- [x] Virtual cards
+- [x] Virtual account number
 - [x] Payment Plans
 - [x] Subscriptions
 - [x] Collection subaccounts

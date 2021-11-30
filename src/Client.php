@@ -15,6 +15,7 @@ use StarfolkSoftware\Flutterwave\API\Refund;
 use StarfolkSoftware\Flutterwave\API\Subaccount;
 use StarfolkSoftware\Flutterwave\API\Subscription;
 use StarfolkSoftware\Flutterwave\API\Transaction;
+use StarfolkSoftware\Flutterwave\API\VirtualAccountNumber;
 use StarfolkSoftware\Flutterwave\API\VirtualCard;
 
 /**
@@ -129,6 +130,16 @@ final class Client
     protected function virtualCards(): VirtualCard
     {
         return new VirtualCard($this);
+    }
+
+    /**
+     * Virtual Account Number API
+     * 
+     * @return VirtualAccountNumber
+     */
+    protected function virtualAccountNumbers(): VirtualAccountNumber
+    {
+        return new VirtualAccountNumber($this);
     }
 
     /**

@@ -5,7 +5,6 @@ namespace StarfolkSoftware\Flutterwave\API;
 use StarfolkSoftware\Flutterwave\Abstracts\ApiAbstract;
 use StarfolkSoftware\Flutterwave\HttpClient\Message\ResponseMediator;
 use StarfolkSoftware\Flutterwave\Options\CreateVirtualCardOptions;
-use StarfolkSoftware\Flutterwave\Options\UpdateVirtualCardOptions;
 
 final class VirtualCard extends ApiAbstract
 {
