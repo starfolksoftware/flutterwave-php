@@ -76,7 +76,7 @@ array(21) { ... }
 - [ ] Remita payments
 - [x] Banks
 - [ ] Misc
-- [ ] Settlements
+- [x] Settlements
 - [ ] OTPS
 - [ ] Chargebacks
 
