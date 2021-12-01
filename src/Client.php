@@ -24,6 +24,7 @@ use StarfolkSoftware\Flutterwave\API\Transaction;
 use StarfolkSoftware\Flutterwave\API\Transfer;
 use StarfolkSoftware\Flutterwave\API\VirtualAccountNumber;
 use StarfolkSoftware\Flutterwave\API\VirtualCard;
+use StarfolkSoftware\Flutterwave\Concerns\MiscellaneousEndpoints;
 
 /**
  * PHP Flutterwave client.
@@ -34,6 +35,8 @@ use StarfolkSoftware\Flutterwave\API\VirtualCard;
  */
 final class Client
 {
+    use MiscellaneousEndpoints;
+    
     /** @var ClientBuilder $clientBuilder */
     private ClientBuilder $clientBuilder;
 
