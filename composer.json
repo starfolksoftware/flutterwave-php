@@ -42,6 +42,7 @@
         "test": "phpunit"
     },
     "minimum-stability": "stable",
+    "prefer-stable": true,
     "support": {
         "email": "contact@starfolksoftware.com",
         "issues": "https://github.com/starfolksoftware/flutterwave-php/issues",

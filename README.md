@@ -1,7 +1,6 @@
-# [WIP] Flutterwave PHP bindings
+# Flutterwave PHP bindings
 
-[![Latest Stable Version](https://poser.pugx.org/starfolksoftware/flutterwave-php/v/stable.svg)](https://packagist.org/packages/starfolksoftware/flutterwave-php)
-[![License](https://poser.pugx.org/starfolksoftware/flutterwave-php/license.svg)](https://packagist.org/packages/starfolksoftware/flutterwave-php)
+[![Latest Stable Version](http://poser.pugx.org/starfolksoftware/flutterwave-php/v)](https://packagist.org/packages/starfolksoftware/flutterwave-php) [![Total Downloads](http://poser.pugx.org/starfolksoftware/flutterwave-php/downloads)](https://packagist.org/packages/starfolksoftware/flutterwave-php) [![Latest Unstable Version](http://poser.pugx.org/starfolksoftware/flutterwave-php/v/unstable)](https://packagist.org/packages/starfolksoftware/flutterwave-php) [![License](http://poser.pugx.org/starfolksoftware/flutterwave-php/license)](https://packagist.org/packages/starfolksoftware/flutterwave-php) [![PHP Version Require](http://poser.pugx.org/starfolksoftware/flutterwave-php/require/php)](https://packagist.org/packages/starfolksoftware/flutterwave-php)
 
 The Flutterwave PHP library provides convenient access to the Flutterwave API from
 applications written in the PHP language. It includes a pre-defined set of
