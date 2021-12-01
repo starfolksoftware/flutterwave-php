@@ -59,3 +59,33 @@ array(21) { ... }
 ## Documentation
 
 See the [PHP API docs](https://developer.flutterwave.com/reference#introduction-1).
+
+
+## Testing
+
+```bash
+composer test
+```
+
+## Changelog
+
+Please see [CHANGELOG](https://github.com/starfolksoftware/flutterwave-php/compare/v0.0.2...v0.6.1) for more information on what has changed recently.
+
+## Road Map
+
+## Contributing
+
+Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+
+## Security Vulnerabilities
+
+Please review [our security policy](.github/CONTRIBUTING.md) on how to report security vulnerabilities.
+
+## Credits
+
+- [Faruk Nasir](https://github.com/frknasir)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
