@@ -16,6 +16,7 @@ use StarfolkSoftware\Flutterwave\API\PayoutSubaccount;
 use StarfolkSoftware\Flutterwave\API\Plan;
 use StarfolkSoftware\Flutterwave\API\Preauthorization;
 use StarfolkSoftware\Flutterwave\API\Refund;
+use StarfolkSoftware\Flutterwave\API\RemitaPayment;
 use StarfolkSoftware\Flutterwave\API\Settlement;
 use StarfolkSoftware\Flutterwave\API\Subaccount;
 use StarfolkSoftware\Flutterwave\API\Subscription;
@@ -236,6 +237,16 @@ final class Client
     protected function bills(): Bill
     {
         return new Bill($this);
+    }
+
+    /**
+     * Remita Payment API
+     * 
+     * @return RemitaPayment
+     */
+    protected function remitaPayments(): RemitaPayment
+    {
+        return new RemitaPayment($this);
     }
 
     /**
