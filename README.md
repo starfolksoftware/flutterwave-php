@@ -72,7 +72,7 @@ array(21) { ... }
 - [x] Subscriptions
 - [x] Collection subaccounts
 - [x] Payout subaccounts
-- [ ] Bills
+- [x] Bills
 - [ ] Remita payments
 - [x] Banks
 - [ ] Misc

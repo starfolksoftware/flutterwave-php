@@ -8,6 +8,7 @@ use Http\Client\Common\Plugin\BaseUriPlugin;
 use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 use StarfolkSoftware\Flutterwave\API\Bank;
 use StarfolkSoftware\Flutterwave\API\Beneficiary;
+use StarfolkSoftware\Flutterwave\API\Bill;
 use StarfolkSoftware\Flutterwave\API\Charge;
 use StarfolkSoftware\Flutterwave\API\Chargeback;
 use StarfolkSoftware\Flutterwave\API\Otp;
@@ -225,6 +226,16 @@ final class Client
     protected function chargebacks(): Chargeback
     {
         return new Chargeback($this);
+    }
+
+    /**
+     * Bill API
+     * 
+     * @return Bill
+     */
+    protected function bills(): Bill
+    {
+        return new Bill($this);
     }
 
     /**
