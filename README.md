@@ -57,29 +57,6 @@ array(21) { ... }
 ...
 ```
 
-## Roadmap
-
-- [x] Charge
-- [x] Validate a charge
-- [x] Tokenized Charges
-- [x] Preauthorization
-- [x] Transactions
-- [x] Transfers
-- [x] Beneficiaries
-- [x] Virtual cards
-- [x] Virtual account number
-- [x] Payment Plans
-- [x] Subscriptions
-- [x] Collection subaccounts
-- [x] Payout subaccounts
-- [x] Bills
-- [x] Remita payments
-- [x] Banks
-- [x] Misc
-- [x] Settlements
-- [x] OTPS
-- [x] Chargebacks
-
 ## Documentation
 
 See the [PHP API docs](https://developer.flutterwave.com/reference#introduction-1).
